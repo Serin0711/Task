@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Front-end Task</title>
+    <style>
+        .radio-con-1 {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .radio-con-1.selected {
+            background-color: #e0f7fa;
+            transform: scale(1.05);
+        }
+        .radio-con-1.selected .extra-content {
+            display: block;
+        }
+        .lose .Line button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .lose .Line button:hover {
+            background-color: #0056b3;
+        }
+
+        .extra-content {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .options-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .color-options,
+        .size-options {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-options label,
+        .size-options label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .color-options select,
+        .size-options select {
+            padding: 10px;
+            margin: 2px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+
+        .extra-content .color-options,
+        .extra-content .size-options {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .extra-content label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .extra-content select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-1">
+        <div class="sub-container">
+            <div class="heading-container">
+                <h1 style="font-size: 22px;color: rgb(37, 84, 84);">Bundle & Save</h1>
+            </div>
+            
+            <div class="radio-container">
+                <div class="radio-con-1" onclick="toggleContent(this)">
+                    <div class="radio-sub-con-1">
+                        <div>
+                            <input type="radio" id="pair1" name="pair" value="1pair">
+                            <label for="pair1">1 unit</label>
+                            <h6 style="padding: 2px 25px;">DKK 150.00</h6>
+                        </div>
+                    </div>
+                    <span class="discount">50% OFF</span>
+                    <div class="extra-content">
+                        <div class="options-row">
+                            <div class="size-options">
+                                <label for="size1"><strong>Size</strong></label>
+                                <select id="size1">
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                                <select id="size1">
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+
+                            </div>
+                            <div class="color-options">
+                                <label for="color1"><strong>Color</strong></label>
+                                <select id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+
+                                </select>
+                                <select id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="radio-con-1" onclick="toggleContent(this)">
+                    <div class="radio-sub-con-1">
+                        <div>
+                            <input type="radio" id="pair1" name="pair" value="1pair">
+                            <label for="pair1">2 unit</label>
+                            <h6 style="padding: 2px 25px;">DKK 150.00</h6>
+                        </div>
+                    </div>
+                    <span class="discount">50% OFF</span>
+                    <div class="extra-content">
+                        <div class="options-row">
+                            <div class="size-options">
+                                <label for="size1"><strong>Size</strong></label>
+
+                                <select id="size1">
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                                <select id="size1">
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+
+                            </div>
+                            <div class="color-options">
+                                <label for="color1"><strong>Color</strong></label>
+                                <select id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+
+                                </select>
+                                <select id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="radio-con-1" onclick="toggleContent(this)">
+                    <div class="radio-sub-con-1">
+                        <div>
+                            <input type="radio" id="pair1" name="pair" value="1pair">
+                            <label for="pair1">3 unit</label>
+                            <h6 style="padding: 2px 25px;">DKK 150.00</h6>
+                        </div>
+                    </div>
+                    <span class="discount">50% OFF</span>
+                    <div class="extra-content">
+                        <div class="options-row">
+                            <div class="size-options">
+                                <label for="size1"><strong>Size</strong></label>
+                                <select id="size1">
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                                <select id="size1">
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+
+                            </div>
+                            <div class="color-options">
+                                <label for="color1"><strong>Color</strong></label>
+                                <select id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+
+                                </select>
+                                <select id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="lose">
+                <div class="Line">
+                    <h6 class="head-6" style="color: rgb(27, 83, 83);">Free delivery</h6>
+                    <h6 class="head-6"><strong>Total:</strong> 360.00</h6>
+                </div>
+                <div class="Line">
+                    <button class="button-1">+ Add to Cart</button>
+                </div>
+                <div class="Line1">
+                    <span style="font-size: 13px; text-align: end; color: gray; font-style: italic;">@powered by
+                        pumper</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(element) {
+            const isSelected = element.classList.contains('selected');
+            const radioButtons = document.querySelectorAll('.radio-con-1');
+            radioButtons.forEach(button => {
+                button.classList.remove('selected');
+                const extraContent = button.querySelector('.extra-content');
+                extraContent.style.display = 'none';
+            });
+
+            if (!isSelected) {
+                element.classList.add('selected');
+                const extraContent = element.querySelector('.extra-content');
+                extraContent.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
